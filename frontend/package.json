@@ -20,8 +20,8 @@
   },
   "scripts": {
     "dev": "node server.js",
-    "build": "--openssl-legacy-provider next build",
-    "start": "NODE_ENV=production node server.js -p $PORT",
-    "heroku-postbuild": "--openssl-legacy-provider next build"
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "heroku-postbuild": "next build"
   }
 }
