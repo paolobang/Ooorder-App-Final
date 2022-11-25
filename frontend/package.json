@@ -1,27 +1,30 @@
-{
+{"engines": {
+  "node": "<=14.x.x",
+  "npm": "<=6.x.x"
+},
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
     "@apollo/react-ssr": "^3.1.5",
-    "@stripe/react-stripe-js": "^1.1.2",
-    "@stripe/stripe-js": "^1.5.0",
-    "apollo-boost": "^0.4.7",
+    "@stripe/react-stripe-js": "^1.15.0",
+    "@stripe/stripe-js": "^1.44.1",
+    "apollo-boost": "^0.4.9",
     "axios": "^0.19.2",
     "express": "^4.18.2",
     "graphql": "^14.7.0",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.1",
     "mdb-react-ui-kit": "^5.0.0",
-    "next": "^9.4.0",
+    "next": "^9.5.5",
     "next-apollo": "^3.1.10",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-icons": "^4.6.0",
     "reactstrap": "^9.1.5"
   },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node server.js -p $PORT",
     "heroku-postbuild": "next build"
   }
 }
