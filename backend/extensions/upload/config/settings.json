@@ -1,11 +1,11 @@
 {
     "provider": "aws-s3",
     "providerOptions": {
-      "accessKeyId": "AKIAYKSIOH6HBZ7NARU2",
-      "secretAccessKey": "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",
-      "region": "us-east-1",
+      "accessKeyId": "${process.env.AWS_ACCESS_KEY}",
+      "secretAccessKey": "${process.env.AWS_SECRET_KEY}",
+      "region": "${process.env.AWS_REGION}",
       "params": {
-        "Bucket": "backend-order-uploads"
+        "Bucket": "${process.env.AWS_BUCKET}"
       }
     }
   }

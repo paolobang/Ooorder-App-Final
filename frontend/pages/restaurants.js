@@ -57,11 +57,15 @@ function Restaurants() {
       <><div className={styles.title}>
         <h1>{restaurant.name}</h1>
         <div>
-                  <div style={{ background: `url(${process.env.NEXT_PUBLIC_API_URL}${restaurant.image[0].url})`}} 
+                  <div style={{ background: `url(
+                    ${restaurant.image[0].url}
+                    )`}} 
                     className={styles.img_background}
                     
                     
-                  /></div>
+                  />
+                  
+                  </div>
         </div>
         <div className={styles.raw_cards}>
           {restaurant.dishes.map((res) => (
@@ -77,8 +81,11 @@ function Restaurants() {
                   <CardImg 
                     className={styles.card_image}
                     top={false}
-                    
-                    src={`${API_URL}${res.image.url}`}
+                    src={
+                      process.env.NODE_ENV === "production"
+                      ? res.image.url
+                      : `${process.env.NEXT_PUBLIC_API_URL}${res.image.url}`
+                    }
                   /></div>
                 </div>
                 

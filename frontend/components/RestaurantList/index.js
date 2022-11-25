@@ -17,7 +17,7 @@ import {
 } from "reactstrap";
 
 import { LoadingScreen } from "../LoadingScreen";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+
 const QUERY = gql`
   {
     restaurants {
