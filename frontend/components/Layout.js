@@ -16,7 +16,7 @@ import { logout } from "../lib/auth";
 import AppContext from "../context/AppContext";
 import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import styles from "../styles/layout.module.css"
-import Footer from "./assets/Footer";
+
 
 const Layout = (props) => {
   const title = "Ooorder® whatever you want";
@@ -103,7 +103,7 @@ const Layout = (props) => {
         </Nav>
       </header>
       <Container className="mb-5">{props.children}</Container>
-      <Footer></Footer>
+      
       <style jsx global>
             {`
               .nav-item .nav-link{
